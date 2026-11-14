@@ -31,7 +31,7 @@ Status: **Starter** means a working first version is in the repository. **Planne
 
 | Tool | Problem it solves | Status |
 | --- | --- | --- |
-| `pr-hygiene-check` | Pull requests opened with no assignee or no description | Planned |
+| [`pr-hygiene-check`](actions/pr-hygiene-check) | Pull requests opened with no assignee or no description | Starter |
 | `stale-pr-label` | Open pull requests nobody has touched for weeks | Planned |
 | `pr-title-check` | Pull request titles that do not follow your convention | Planned |
 | `large-pr-warning` | Pull requests too big to review well | Planned |
@@ -41,7 +41,7 @@ Status: **Starter** means a working first version is in the repository. **Planne
 
 | Tool | Problem it solves | Status |
 | --- | --- | --- |
-| `repo-health` | "Is this repository in good shape?" in one read-only call | Planned |
+| [`repo-health`](mcp/repo-health) | "Is this repository in good shape?" in one read-only call | Starter |
 | `pr-queue` | A summary of open pull requests for an assistant to read | Planned |
 | `ci-status` | The latest check results for a branch or pull request | Planned |
 | `issue-digest` | A short digest of new and unanswered issues | Planned |
@@ -50,15 +50,33 @@ Status: **Starter** means a working first version is in the repository. **Planne
 
 | Tool | Problem it solves | Status |
 | --- | --- | --- |
-| `stale-prs` | Finding stale open pull requests across all of your repositories | Planned |
+| [`stale-prs`](cli/stale-prs) | Finding stale open pull requests across all of your repositories | Starter |
 | `repo-inventory` | Repositories missing a README, license or description | Planned |
 | `unassigned-prs` | Open pull requests with no assignee | Planned |
 | `branch-report` | Branches that look merged or abandoned (report only, never deletes) | Planned |
 
-The first working starter in each family arrives in the first pull request. This table is updated as each one lands.
+One starter in each family is in the repository today. Open each tool's README for a usage example. The rest of the table is updated as each one lands.
+
+## Quick start
+
+```bash
+git clone https://github.com/midnghtsapphire/github-free-toolkit.git
+cd github-free-toolkit
+npm test            # runs every tool's tests locally, no network or credentials needed
+```
+
+| Try this | Command |
+| --- | --- |
+| List stale pull requests across your repositories | `node cli/stale-prs/bin/stale-prs.js --days 14` |
+| Score a repository's health (MCP server, over stdio) | see [`mcp/repo-health`](mcp/repo-health) |
+| Check pull requests for an assignee and a description | see [`actions/pr-hygiene-check`](actions/pr-hygiene-check) |
 
 ## Contributing and security
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) once the first pull request is merged, and report vulnerabilities privately through the repository's Security tab.
+See [CONTRIBUTING.md](CONTRIBUTING.md) to add a tool. Report vulnerabilities privately through the repository's Security tab; see [SECURITY.md](SECURITY.md).
+
+## License
+
+[MIT](LICENSE).
 
 Maintained by Audrey Evans ([@midnghtsapphire](https://github.com/midnghtsapphire)).
