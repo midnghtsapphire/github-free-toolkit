@@ -1,0 +1,9 @@
+{
+  "name": "stale-prs",
+  "version": "0.1.0",
+  "description": "List stale open pull requests across a user's repositories using the gh CLI.",
+  "license": "MIT",
+  "bin": { "stale-prs": "bin/stale-prs.js" },
+  "engines": { "node": ">=18" },
+  "scripts": { "test": "node --test" }
+}

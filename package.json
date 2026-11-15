@@ -1,0 +1,11 @@
+{
+  "name": "github-free-toolkit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Free, small, open GitHub tools: Actions, MCP servers and CLIs.",
+  "license": "MIT",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "test": "node --test"
+  }
+}

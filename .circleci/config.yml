@@ -1,0 +1,27 @@
+version: 2.1
+
+# Checks run on CircleCI, not GitHub-hosted workflows.
+# A CircleCI project must be followed for this repository before this runs
+# (a one-time step for the repository owner; tracked on the BOM list).
+
+jobs:
+  test:
+    docker:
+      - image: cimg/node:20.18
+    steps:
+      - checkout
+      - run:
+          name: Show versions
+          command: node --version && npm --version
+      - run:
+          name: Run tests
+          command: npm test
+      - run:
+          name: No workflow files or tracking code
+          command: |
+            if [ -d .github/workflows ]; then echo "GitHub-hosted workflows are not used in this repository"; exit 1; fi
+
+workflows:
+  test:
+    jobs:
+      - test
