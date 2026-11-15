@@ -71,3 +71,26 @@ test('main writes outputs and a step summary, and never prints the body', () => 
 test('main treats a null pull request (not a PR event) as failing both checks', () => {
   assert.equal(main({ PR_ASSIGNEES: 'null', PR_BODY: '' }, quiet), 1);
 });
+
+// --- GITHUB_EVENT_PATH support ---
+test('main reads the pull request from GITHUB_EVENT_PATH', () => {
+  const fsx = require('node:fs');
+  const osx = require('node:os');
+  const pathx = require('node:path');
+  const dir = fsx.mkdtempSync(pathx.join(osx.tmpdir(), 'hygiene-event-'));
+  const write = (name, pr) => { const f = pathx.join(dir, name); fsx.writeFileSync(f, JSON.stringify({ pull_request: pr })); return f; };
+  const logs = [];
+  const sink = { log: (s) => logs.push(s) };
+  const bad = write('bad.json', { number: 7, assignees: [], body: '<!-- template -->' });
+  assert.equal(main({ GITHUB_EVENT_PATH: bad }, sink), 1);
+  assert.equal(logs.filter((l) => l.startsWith('::error')).length, 2);
+  const good = write('good.json', { number: 8, assignees: [{ login: 'ann' }], body: 'Fixes the login redirect and adds a regression test.' });
+  logs.length = 0;
+  assert.equal(main({ GITHUB_EVENT_PATH: good }, sink), 0);
+  assert.match(logs[0], /PR #8: hygiene check passed/);
+  const warn = write('warn.json', { number: 9, assignees: [], body: '' });
+  logs.length = 0;
+  assert.equal(main({ GITHUB_EVENT_PATH: warn, INPUT_FAIL_ON_PROBLEM: 'false' }, sink), 0);
+  assert.ok(logs[0].startsWith('::warning'));
+  assert.equal(main({ GITHUB_EVENT_PATH: pathx.join(dir, 'missing.json') }, sink), 1);
+});

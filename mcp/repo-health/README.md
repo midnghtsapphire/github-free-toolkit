@@ -4,6 +4,7 @@ A minimal [Model Context Protocol](https://modelcontextprotocol.io) server with 
 
 - Read-only: it only makes `GET` requests to the GitHub API.
 - No dependencies, no telemetry. It talks to GitHub and to your assistant over stdio, nothing else.
+- **Uses your `gh` login automatically** when no `GITHUB_TOKEN` is set (read-only `gh api -X GET` calls), so nothing secret needs to go in your MCP config. It falls back to plain HTTPS if `gh` is not installed.
 - Works without a token for public repositories (GitHub's low anonymous rate limit applies). To raise the limit or read your private repositories, set `GITHUB_TOKEN` yourself. The token is only sent to GitHub as a header and is never logged or returned.
 
 ## What it checks

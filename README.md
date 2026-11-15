@@ -51,8 +51,8 @@ Status: **Starter** means a working first version is in the repository. **Planne
 | Tool | Problem it solves | Status |
 | --- | --- | --- |
 | [`stale-prs`](cli/stale-prs) | Finding stale open pull requests across all of your repositories | Starter |
-| `repo-inventory` | Repositories missing a README, license or description | Planned |
-| `unassigned-prs` | Open pull requests with no assignee | Planned |
+| [`repo-inventory`](cli/repo-inventory) | Repositories missing a README, license or description | Starter |
+| [`unassigned-prs`](cli/unassigned-prs) | Open pull requests with no assignee | Starter |
 | `branch-report` | Branches that look merged or abandoned (report only, never deletes) | Planned |
 
 One starter in each family is in the repository today. Open each tool's README for a usage example. The rest of the table is updated as each one lands.
@@ -68,8 +68,16 @@ npm test            # runs every tool's tests locally, no network or credentials
 | Try this | Command |
 | --- | --- |
 | List stale pull requests across your repositories | `node cli/stale-prs/bin/stale-prs.js --days 14` |
+| List open pull requests nobody is assigned to | `node cli/unassigned-prs/bin/unassigned-prs.js` |
+| Find repositories missing a README, license or description | `node cli/repo-inventory/bin/repo-inventory.js --public-only` |
 | Score a repository's health (MCP server, over stdio) | see [`mcp/repo-health`](mcp/repo-health) |
 | Check pull requests for an assignee and a description | see [`actions/pr-hygiene-check`](actions/pr-hygiene-check) |
+
+## Support / Pro Pack
+
+Everything in this repository is free and MIT licensed, and always will be. If it saves you time and you want to support the project, the **Pro Pack** is a one-time download: all of the tools bundled together with a Setup & Playbook guide (install each tool, a weekly stale-PR report on cron, wiring `repo-health` into Claude or Cursor, a PR-hygiene policy template, and troubleshooting).
+
+Get the Pro Pack: PRO_PACK_URL
 
 ## Contributing and security
 

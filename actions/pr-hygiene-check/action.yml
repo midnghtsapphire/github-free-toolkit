@@ -29,10 +29,8 @@ runs:
   steps:
     - id: check
       shell: bash
+      # The pull request is read from GITHUB_EVENT_PATH (the webhook payload GitHub provides).
       env:
-        PR_ASSIGNEES: ${{ toJSON(github.event.pull_request.assignees) }}
-        PR_BODY: ${{ github.event.pull_request.body }}
-        PR_NUMBER: ${{ github.event.pull_request.number }}
         INPUT_REQUIRE_ASSIGNEE: ${{ inputs.require-assignee }}
         INPUT_MIN_DESCRIPTION_LENGTH: ${{ inputs.min-description-length }}
         INPUT_FAIL_ON_PROBLEM: ${{ inputs.fail-on-problem }}

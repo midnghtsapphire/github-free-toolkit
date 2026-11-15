@@ -50,7 +50,14 @@ For production use, replace `@main` with a full commit SHA.
 node --test actions/pr-hygiene-check
 ```
 
-You can also try it by hand:
+The action reads the pull request from the webhook payload at `GITHUB_EVENT_PATH`. Try it against a fake event:
+
+```bash
+echo '{"pull_request":{"number":42,"assignees":[],"body":""}}' > /tmp/event.json
+GITHUB_EVENT_PATH=/tmp/event.json node actions/pr-hygiene-check/check.js
+```
+
+Or set the values directly:
 
 ```bash
 PR_ASSIGNEES='[]' PR_BODY='' node actions/pr-hygiene-check/check.js

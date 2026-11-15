@@ -1,5 +1,7 @@
 'use strict';
 
+const { spawnSync } = require('node:child_process');
+
 const NAME_RE = /^[A-Za-z0-9._-]{1,100}$/;
 
 function validateName(value, label) {
@@ -18,6 +20,27 @@ async function getJson(fetchImpl, base, path, token) {
   if (res.status === 403 || res.status === 429) throw new Error('GitHub refused the request (rate limit or permissions). Set GITHUB_TOKEN to raise the limit.');
   if (!res.ok) throw new Error(`GitHub returned HTTP ${res.status}.`);
   return res.json();
+}
+
+/**
+ * fetch-shaped adapter over "gh api" (GET only), so the server can use your existing gh login
+ * and no token has to be handed to the MCP client config. Only used when no GITHUB_TOKEN is set.
+ */
+function ghFetch(url, _init, { env = process.env } = {}) {
+  const apiPath = String(url).replace(/^https?:\/\/[^/]+/, '');
+  const result = spawnSync(env.GH_BIN || 'gh', ['api', '-X', 'GET', apiPath.replace(/^\//, '')], { encoding: 'utf8', env, maxBuffer: 32 * 1024 * 1024 });
+  if (result.error || result.status === null) {
+    return Promise.resolve({ ok: false, status: 0, json: async () => ({}), ghMissing: true });
+  }
+  const m = /HTTP (\d{3})/.exec(result.stderr || '');
+  const status = result.status === 0 ? 200 : (m ? Number(m[1]) : 500);
+  return Promise.resolve({ ok: status === 200, status, json: async () => JSON.parse(result.stdout) });
+}
+
+function defaultFetch(token, base, env = process.env) {
+  if (token || base !== 'https://api.github.com') return fetch;
+  const probe = spawnSync(env.GH_BIN || 'gh', ['--version'], { encoding: 'utf8', env });
+  return probe.status === 0 ? (u, i) => ghFetch(u, i, { env }) : fetch;
 }
 
 const DAY = 24 * 60 * 60 * 1000;
@@ -52,7 +75,8 @@ function scoreRepo(repo, community, openPulls, now = Date.now()) {
   };
 }
 
-async function repoHealth({ owner, repo }, { fetchImpl = fetch, base = 'https://api.github.com', token, now } = {}) {
+async function repoHealth({ owner, repo }, { fetchImpl, base = 'https://api.github.com', token, now } = {}) {
+  fetchImpl = fetchImpl || defaultFetch(token, base);
   validateName(owner, 'owner');
   validateName(repo, 'repo');
   const root = `/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}`;
@@ -64,4 +88,4 @@ async function repoHealth({ owner, repo }, { fetchImpl = fetch, base = 'https://
   return scoreRepo(repoData, community, Array.isArray(pulls) ? pulls : [], now);
 }
 
-module.exports = { validateName, scoreRepo, repoHealth };
+module.exports = { validateName, scoreRepo, repoHealth, ghFetch };

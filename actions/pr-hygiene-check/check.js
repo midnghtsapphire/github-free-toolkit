@@ -51,7 +51,31 @@ function appendFile(path, text) {
   if (path) fs.appendFileSync(path, text);
 }
 
-function main(env = process.env, stdout = console) {
+/**
+ * Read the pull request from the webhook payload GitHub writes to GITHUB_EVENT_PATH.
+ * Explicit PR_ASSIGNEES / PR_BODY / PR_NUMBER environment variables win when they are set (used by tests).
+ */
+function loadEvent(env) {
+  if (!env.GITHUB_EVENT_PATH) return {};
+  try {
+    const event = JSON.parse(fs.readFileSync(env.GITHUB_EVENT_PATH, 'utf8'));
+    const pr = event.pull_request || {};
+    return {
+      PR_ASSIGNEES: JSON.stringify(pr.assignees || []),
+      PR_BODY: pr.body,
+      PR_NUMBER: pr.number === undefined ? undefined : String(pr.number),
+    };
+  } catch {
+    return {};
+  }
+}
+
+function main(rawEnv = process.env, stdout = console) {
+  const fromEvent = loadEvent(rawEnv);
+  const env = { ...rawEnv };
+  for (const key of ['PR_ASSIGNEES', 'PR_BODY', 'PR_NUMBER']) {
+    if (env[key] === undefined && fromEvent[key] !== undefined) env[key] = fromEvent[key];
+  }
   const minParsed = Number.parseInt(env.INPUT_MIN_DESCRIPTION_LENGTH ?? '20', 10);
   const minLength = Number.isNaN(minParsed) ? 20 : minParsed;
   const { problems } = evaluate({
@@ -83,4 +107,4 @@ if (require.main === module) {
   process.exitCode = main();
 }
 
-module.exports = { visibleDescription, parseAssignees, evaluate, main };
+module.exports = { visibleDescription, parseAssignees, evaluate, loadEvent, main };
