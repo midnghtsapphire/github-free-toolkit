@@ -77,7 +77,7 @@ npm test            # runs every tool's tests locally, no network or credentials
 
 Everything in this repository is free and MIT licensed, and always will be. If it saves you time and you want to support the project, the **Pro Pack** is a one-time download: all of the tools bundled together with a Setup & Playbook guide (install each tool, a weekly stale-PR report on cron, wiring `repo-health` into Claude or Cursor, a PR-hygiene policy template, and troubleshooting).
 
-Get the Pro Pack: PRO_PACK_URL
+Get the Pro Pack: [Gumroad ($9+, pay what you want)](https://angelreporter.gumroad.com/l/fpxeyn) or [Whop ($19)](https://whop.com/kdp-agent-fleet/github-free-toolkit-pro-pack/).
 
 ## Contributing and security
 

@@ -64,3 +64,7 @@ PR_ASSIGNEES='[]' PR_BODY='' node actions/pr-hygiene-check/check.js
 ```
 
 Expected output: two `::error` lines and exit code 1.
+
+---
+
+**Get the Pro Pack:** all the toolkit's tools plus a Setup & Playbook guide, templates and a weekly-report script: [Gumroad](https://angelreporter.gumroad.com/l/fpxeyn) or [Whop](https://whop.com/kdp-agent-fleet/github-free-toolkit-pro-pack/). The tool itself is and stays free and MIT licensed.

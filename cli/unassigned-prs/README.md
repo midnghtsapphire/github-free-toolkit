@@ -46,3 +46,7 @@ Exit codes: `0` success, `1` found with `--fail-if-any`, `2` usage or `gh` error
 ```bash
 node --test cli/unassigned-prs
 ```
+
+---
+
+**Get the Pro Pack:** all the toolkit's tools plus a Setup & Playbook guide, templates and a weekly-report script: [Gumroad](https://angelreporter.gumroad.com/l/fpxeyn) or [Whop](https://whop.com/kdp-agent-fleet/github-free-toolkit-pro-pack/). The tool itself is and stays free and MIT licensed.

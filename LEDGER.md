@@ -2,6 +2,15 @@
 
 Play-by-play record per revvel-standards. Append-only. Newest first.
 
+## 2026-11-14 — Git-Master session — Pro Pack buy links
+
+- **Actor:** Git-Master (GitHub orchestrator)
+- **Requested by:** Audrey Evans, 2026-11-14 ("I need it launched stop waiting for me figure it out and launch it")
+- **Role:** executed
+- **Files:** `README.md`, `cli/*/README.md`, `actions/pr-hygiene-check/README.md`, `mcp/repo-health/README.md`, `CHANGELOG.md`, `LEDGER.md`
+- **What was done:** Replaced the `PRO_PACK_URL` placeholder with the live listings (Gumroad https://angelreporter.gumroad.com/l/fpxeyn, Whop https://whop.com/kdp-agent-fleet/github-free-toolkit-pro-pack/) and linked them from each tool README. Repository homepage and topics were set with `gh repo edit`; visibility was not changed.
+- **Decisions:** Links are plain, with no tracking or affiliate parameters. Tools remain free and MIT licensed.
+
 ## 2026-11-14 — Git-Master session — Launch starters and Pro Pack
 
 - **Actor:** Git-Master (GitHub orchestrator)

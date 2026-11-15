@@ -53,3 +53,7 @@ The tests use an injected fetch and a local fake API, so they need no network or
 ```bash
 npm test
 ```
+
+---
+
+**Get the Pro Pack:** all the toolkit's tools plus a Setup & Playbook guide, templates and a weekly-report script: [Gumroad](https://angelreporter.gumroad.com/l/fpxeyn) or [Whop](https://whop.com/kdp-agent-fleet/github-free-toolkit-pro-pack/). The tool itself is and stays free and MIT licensed.

@@ -51,3 +51,7 @@ The tests use a stub `gh`, so they need no login and no network:
 ```bash
 npm test
 ```
+
+---
+
+**Get the Pro Pack:** all the toolkit's tools plus a Setup & Playbook guide, templates and a weekly-report script: [Gumroad](https://angelreporter.gumroad.com/l/fpxeyn) or [Whop](https://whop.com/kdp-agent-fleet/github-free-toolkit-pro-pack/). The tool itself is and stays free and MIT licensed.

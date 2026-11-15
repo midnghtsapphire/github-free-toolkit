@@ -2,6 +2,10 @@
 
 All notable changes to this project. Append-only, newest first. Each entry: date, agent, what changed.
 
+## 2026-11-14 — Git-Master — Pro Pack buy links
+
+- Replaced the `PRO_PACK_URL` placeholder in `README.md` with the Gumroad and Whop links, and added a "Get the Pro Pack" line to each tool's README. No code changed.
+
 ## 2026-11-14 — Git-Master — Starters 4 and 5, project files, Pro Pack hooks
 
 - Added `cli/unassigned-prs` (open pull requests with no assignee) and `cli/repo-inventory` (repositories missing a README, license or description), each with tests and a README. Both are read-only, use `gh api`, accept an owner argument and support `--json`.

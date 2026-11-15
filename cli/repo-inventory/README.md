@@ -50,3 +50,7 @@ A README or license counts if a file named like `README*` / `LICENSE*` / `COPYIN
 ```bash
 node --test cli/repo-inventory
 ```
+
+---
+
+**Get the Pro Pack:** all the toolkit's tools plus a Setup & Playbook guide, templates and a weekly-report script: [Gumroad](https://angelreporter.gumroad.com/l/fpxeyn) or [Whop](https://whop.com/kdp-agent-fleet/github-free-toolkit-pro-pack/). The tool itself is and stays free and MIT licensed.
