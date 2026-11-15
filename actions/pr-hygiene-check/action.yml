@@ -1,0 +1,37 @@
+name: PR Hygiene Check
+description: Fails (or warns) when a pull request has no assignee or no real description.
+author: Audrey Evans
+branding:
+  icon: check-circle
+  color: blue
+inputs:
+  require-assignee:
+    description: Require at least one assignee on the pull request.
+    required: false
+    default: "true"
+  min-description-length:
+    description: Minimum number of characters the pull request description must have (HTML comments and whitespace are ignored). Use 0 to turn the check off.
+    required: false
+    default: "20"
+  fail-on-problem:
+    description: Fail the step when a problem is found. Set to "false" to only warn.
+    required: false
+    default: "true"
+outputs:
+  passed:
+    description: '"true" when every enabled check passed, otherwise "false".'
+    value: ${{ steps.check.outputs.passed }}
+  problems:
+    description: Number of problems found.
+    value: ${{ steps.check.outputs.problems }}
+runs:
+  using: composite
+  steps:
+    - id: check
+      shell: bash
+      # The pull request is read from GITHUB_EVENT_PATH (the webhook payload GitHub provides).
+      env:
+        INPUT_REQUIRE_ASSIGNEE: ${{ inputs.require-assignee }}
+        INPUT_MIN_DESCRIPTION_LENGTH: ${{ inputs.min-description-length }}
+        INPUT_FAIL_ON_PROBLEM: ${{ inputs.fail-on-problem }}
+      run: node "$GITHUB_ACTION_PATH/check.js"

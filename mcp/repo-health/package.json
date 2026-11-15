@@ -1,0 +1,9 @@
+{
+  "name": "repo-health-mcp",
+  "version": "0.1.0",
+  "description": "A minimal read-only MCP server with one tool: repo_health.",
+  "license": "MIT",
+  "bin": { "repo-health-mcp": "server.js" },
+  "engines": { "node": ">=18" },
+  "scripts": { "test": "node --test" }
+}

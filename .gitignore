@@ -1,0 +1,8 @@
+node_modules/
+*.log
+.env
+.env.*
+.DS_Store
+
+# Paid Pro Pack build output and guide sources stay out of git
+dist/
