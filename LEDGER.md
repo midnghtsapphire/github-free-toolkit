@@ -2,6 +2,16 @@
 
 Play-by-play record per revvel-standards. Append-only. Newest first.
 
+## 2026-11-21 — Git-Master session — Paid dev tools tracker
+
+- **Actor:** Git-Master (GitHub orchestrator)
+- **Requested by:** Audrey Evans, 2026-11-21 (asked to track paid apps, check free tiers and FOSS alternatives, and use what was found to make our own)
+- **Role:** executed
+- **Files:** `Library/paid-tools-tracker.md`, `Library/README.md`, `CHANGELOG.md`, `LEDGER.md`
+- **What was done:** Added a public tracker of official free tiers, plan names, FOSS alternatives, and verdicts for mabl, Octopus Deploy, Devin, Bito, Gitar, SonarCloud, CircleCI, cubic, and GitGuardian. Opened a PR into `daily/2026-11-21`. Did not merge it.
+- **Decisions:** This public repository must not contain account emails, invoices, or private amounts; those stay on the private Page. Official public list prices also stay off this copy so the file is tiers and alternatives only. Purchases still need an explicit yes, so the file only recommends. No GitHub-hosted Actions were added. Qlty is recorded as Business Source (not OSI-open) until 10 Dec 2028, still usable in our own CI.
+- **Open / handoff:** PRs are not self-merged. Daily refreshes should update this file (tiers and alternatives) and the private Page (amounts).
+
 ## 2026-11-14 — Git-Master session — Pro Pack buy links
 
 - **Actor:** Git-Master (GitHub orchestrator)
