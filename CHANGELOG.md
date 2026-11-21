@@ -2,6 +2,11 @@
 
 All notable changes to this project. Append-only, newest first. Each entry: date, agent, what changed.
 
+## 2026-11-21 — Git-Master — Paid dev tools tracker
+
+- Added `Library/paid-tools-tracker.md`: official free tiers, plan names, FOSS alternatives, and keep / free-tier / replace verdicts for mabl, Octopus Deploy, Devin, Bito, Gitar, SonarCloud, CircleCI, cubic, and GitGuardian.
+- This public copy has no account emails, invoices, or private amounts. Listed the document in `Library/README.md`.
+
 ## 2026-11-14 — Git-Master — Pro Pack buy links
 
 - Replaced the `PRO_PACK_URL` placeholder in `README.md` with the Gumroad and Whop links, and added a "Get the Pro Pack" line to each tool's README. No code changed.

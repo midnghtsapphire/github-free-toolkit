@@ -6,6 +6,7 @@ This repository is software only and does not rely on scanned, licensed or third
 
 References the tools are built against (links only; nothing copied here):
 
+- Git-Master, 2026, Paid dev tools tracker (tiers and FOSS alternatives; no private amounts) — `Library/paid-tools-tracker.md`
 - GitHub, 2026, GitHub CLI manual (`gh api`, `gh search prs`) — <https://cli.github.com/manual/>
 - GitHub, 2026, REST API documentation (search, repositories, community profile) — <https://docs.github.com/rest>
 - GitHub, 2026, GraphQL API documentation — <https://docs.github.com/graphql>
