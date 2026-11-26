@@ -64,3 +64,50 @@ Checked 21 November 2026:
 - [CircleCI pricing](https://circleci.com/pricing/)
 - [cubic pricing](https://www.cubic.dev/pricing-plans)
 - [GitGuardian pricing](https://www.gitguardian.com/pricing)
+
+## 2026-11-26 — Daily scan (Git-Master)
+
+Changes since the 21 November 2026 entry. Official pages rechecked on 26 November 2026; GitHub data pulled the same day.
+
+### Tools we track
+
+| Tool | What changed since 21 Nov | Verdict |
+| --- | --- | --- |
+| mabl | No change seen. Local, CLI, and CI Runner runs still use no credits; the 14-day trial is still listed. | Unchanged |
+| Octopus Deploy | No change to the Free tier (10 projects, 10 tenants, 10 machines, 10 users, 5 concurrent tasks). Sales closed the licensing conversation on 25 Nov 2026 with no plan change. | Stay on Free |
+| Devin | The self-serve page now describes a **Free mode** on the Teams plan: each member can run up to 2 cloud sessions at a time on SWE-2 at no cost. The 21 Nov entry noted SWE-2 free on Desktop and CLI through 30 Nov 2026; that end date is no longer on the page. Plan names and list structure are unchanged. | Unchanged. Recheck after 30 Nov |
+| Bito | The pricing page now leads with two newer products, **Governor** (usage-based model router and context engine for coding agents) and **AI Architect** (contact sales). AI Code Review Team and Professional plans and their line allowance are unchanged. Professional lists a self-hosted add-on. | Unchanged. Governor is not needed |
+| Gitar | No pricing change. Automatic reviews are still paused on the included processing budget (bot notes on pull requests on 26 Nov 2026). | Still do not pay a higher tier |
+| SonarCloud | No change. Free 50k private LOC; Team still priced by LOC. | Unchanged |
+| CircleCI | No change to Free or Performance terms. | Unchanged |
+| cubic | No change. Team, Pro, Max, Starter (20 PR reviews a month), free for public repos; flex capacity still optional. | Unchanged |
+| GitGuardian | No change. Starter is still free: 25 developers, unlimited real-time scanning, 500 historical scans, 10,000 API calls a month. | Unchanged |
+
+### FOSS alternatives, new releases
+
+| Project | Stars | License | Latest release |
+| --- | --- | --- | --- |
+| [Playwright](https://github.com/microsoft/playwright) | 101,116 | Apache-2.0 | v1.65.1 (13 Nov 2026, unchanged) |
+| [Cypress](https://github.com/cypress-io/cypress) | 51,042 | MIT | v16.4.0 (25 Nov 2026, new) |
+| [OpenHands](https://github.com/OpenHands/OpenHands) | 94,400 | MIT | v1.46.0 (25 Nov 2026, new) |
+| [PR-Agent](https://github.com/The-PR-Agent/pr-agent) | 16,685 | MIT | v0.50.0 (unchanged) |
+| [Semgrep](https://github.com/semgrep/semgrep) | 17,980 | LGPL-2.1 | v1.187.0 (24 Nov 2026, new) |
+| [Qlty](https://github.com/qltysh/qlty) | 3,235 | Business Source License 1.1 | v0.674.0 (24 Nov 2026, new) |
+| [Woodpecker CI](https://github.com/woodpecker-ci/woodpecker) | 8,289 | Apache-2.0 | v3.21.0 (25 Nov 2026, new) |
+| [Gitleaks](https://github.com/gitleaks/gitleaks) | 31,363 | MIT | v8.30.1 (unchanged) |
+| [Kamal](https://github.com/basecamp/kamal) | 14,759 | MIT | v2.12.0 (unchanged) |
+
+None of these changes is a reason to drop a paid tool today.
+
+### New or trending, worth watching
+
+- [Tracer-Cloud/opensre](https://github.com/Tracer-Cloud/opensre): open-source agent for CI/CD reliability. 15,715 stars, Apache-2.0, release v0.1.2026.11.26 (26 Nov 2026). On GitHub trending today. Watch only; not evaluated.
+- [interfere-inc/landmines](https://github.com/interfere-inc/landmines): Oxlint rules aimed at AI-written code (fake implementations, masked flaky tests). 822 stars, MIT, created 28 Oct 2026. Could join the CircleCI lint backup; not evaluated.
+- [pierridotite/mobile-agent-testers](https://github.com/pierridotite/mobile-agent-testers): parallel AI testers on phone simulators. 2,468 stars, MIT, created 16 Nov 2026. It runs on GitHub-hosted runners, which this fleet does not use, so it would need porting to CircleCI.
+- [xcodebeast/flashwright](https://github.com/xcodebeast/flashwright): says it is a faster drop-in replacement for Playwright. 372 stars, Apache-2.0, created 8 Oct 2026. Too young to trust; keep Playwright.
+- Security news to be aware of: [1Password update on a November 2026 security incident](https://1password.com/blog/update-on-nov-2026-security-incident) and a [GitHub incident on degraded experiences across products](https://www.githubstatus.com/incidents/qn8mfv6q5hlx). Not checked against our accounts.
+
+### Not checked
+
+- Product Hunt was not checked today.
+- GitGuardian's page came back as a bot-check page for part of the content; the Starter limits above are from the text that did load.
