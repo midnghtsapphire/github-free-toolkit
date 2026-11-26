@@ -2,6 +2,27 @@
 
 Play-by-play record per revvel-standards. Append-only. Newest first.
 
+## 2026-11-26 — Git-Master session — Daily dev-tools scan
+
+- **Actor:** Git-Master (GitHub orchestrator)
+- **Requested by:** Audrey Evans, standing daily dev-tools scout routine (2026-11-21: track paid apps every day, check price changes, new tools, and free open-source alternatives)
+- **Role:** executed
+- **Files:** `Library/paid-tools-tracker.md`, `CHANGELOG.md`, `LEDGER.md`
+- **What was done:** Rechecked the official pricing pages for mabl, Octopus Deploy, Devin, Bito, Gitar, SonarCloud, CircleCI, cubic, and GitGuardian; pulled stars, licenses, and latest releases for the FOSS list; scanned GitHub trending and Hacker News for new dev tools. Appended a dated section. Earlier sections are unchanged.
+- **Decisions:** Public file keeps tiers, plan names, and alternatives only. Amounts and receipts go to the private Page. This branch starts from `daily/2026-11-21` because the tracker file is not on `main` yet, so the pull request also carries the 21 November commits.
+- **Open / handoff:** Recheck Devin after 30 Nov 2026. Product Hunt not checked. Pull request is not self-merged.
+- **Correction (same session):** The first commit said GitGuardian's page was partly a bot-check page. It was Bito and cubic, which were then read through a second fetch. Fixed in a follow-up commit, not by rewriting history.
+
+## 2026-11-21 — Git-Master session — Paid dev tools tracker
+
+- **Actor:** Git-Master (GitHub orchestrator)
+- **Requested by:** Audrey Evans, 2026-11-21 (asked to track paid apps, check free tiers and FOSS alternatives, and use what was found to make our own)
+- **Role:** executed
+- **Files:** `Library/paid-tools-tracker.md`, `Library/README.md`, `CHANGELOG.md`, `LEDGER.md`
+- **What was done:** Added a public tracker of official free tiers, plan names, FOSS alternatives, and verdicts for mabl, Octopus Deploy, Devin, Bito, Gitar, SonarCloud, CircleCI, cubic, and GitGuardian. Opened a PR into `daily/2026-11-21`. Did not merge it.
+- **Decisions:** This public repository must not contain account emails, invoices, or private amounts; those stay on the private Page. Official public list prices also stay off this copy so the file is tiers and alternatives only. Purchases still need an explicit yes, so the file only recommends. No GitHub-hosted Actions were added. Qlty is recorded as Business Source (not OSI-open) until 10 Dec 2028, still usable in our own CI.
+- **Open / handoff:** PRs are not self-merged. Daily refreshes should update this file (tiers and alternatives) and the private Page (amounts).
+
 ## 2026-11-14 — Git-Master session — Pro Pack buy links
 
 - **Actor:** Git-Master (GitHub orchestrator)

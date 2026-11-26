@@ -2,6 +2,16 @@
 
 All notable changes to this project. Append-only, newest first. Each entry: date, agent, what changed.
 
+## 2026-11-26 — Git-Master — Daily dev-tools scan
+
+- Appended a dated 26 November 2026 section to `Library/paid-tools-tracker.md`: changes since 21 November (Devin Teams Free mode, Bito's new Governor and AI Architect products, Gitar reviews still paused), new FOSS releases, and new tools to watch. No amounts or account details.
+- Corrected the "Not checked" note in that section: the bot-check page came from Bito and cubic (read through a second fetch), not GitGuardian.
+
+## 2026-11-21 — Git-Master — Paid dev tools tracker
+
+- Added `Library/paid-tools-tracker.md`: official free tiers, plan names, FOSS alternatives, and keep / free-tier / replace verdicts for mabl, Octopus Deploy, Devin, Bito, Gitar, SonarCloud, CircleCI, cubic, and GitGuardian.
+- This public copy has no account emails, invoices, or private amounts. Listed the document in `Library/README.md`.
+
 ## 2026-11-14 — Git-Master — Pro Pack buy links
 
 - Replaced the `PRO_PACK_URL` placeholder in `README.md` with the Gumroad and Whop links, and added a "Get the Pro Pack" line to each tool's README. No code changed.
