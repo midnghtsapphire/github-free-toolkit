@@ -11,6 +11,7 @@ Play-by-play record per revvel-standards. Append-only. Newest first.
 - **What was done:** Rechecked the official pricing pages for mabl, Octopus Deploy, Devin, Bito, Gitar, SonarCloud, CircleCI, cubic, and GitGuardian; pulled stars, licenses, and latest releases for the FOSS list; scanned GitHub trending and Hacker News for new dev tools. Appended a dated section. Earlier sections are unchanged.
 - **Decisions:** Public file keeps tiers, plan names, and alternatives only. Amounts and receipts go to the private Page. This branch starts from `daily/2026-11-21` because the tracker file is not on `main` yet, so the pull request also carries the 21 November commits.
 - **Open / handoff:** Recheck Devin after 30 Nov 2026. Product Hunt not checked. Pull request is not self-merged.
+- **Correction (same session):** The first commit said GitGuardian's page was partly a bot-check page. It was Bito and cubic, which were then read through a second fetch. Fixed in a follow-up commit, not by rewriting history.
 
 ## 2026-11-21 — Git-Master session — Paid dev tools tracker
 

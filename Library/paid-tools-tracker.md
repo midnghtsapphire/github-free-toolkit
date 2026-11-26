@@ -110,4 +110,4 @@ None of these changes is a reason to drop a paid tool today.
 ### Not checked
 
 - Product Hunt was not checked today.
-- GitGuardian's page came back as a bot-check page for part of the content; the Starter limits above are from the text that did load.
+- The Bito and cubic pricing pages returned a bot-check page to a plain download and were read through a second fetch. All nine official pages were read.
