@@ -2,6 +2,10 @@
 
 All notable changes to this project. Append-only, newest first. Each entry: date, agent, what changed.
 
+## 2026-11-27 — Git-Master — Daily dev-tools scan
+
+- Appended a dated 27 November 2026 section to `Library/paid-tools-tracker.md`: no pricing or free-tier changes at the nine tracked tools since 26 November, refreshed FOSS stars and releases (Argo CD v3.6.3 is new), and new tools to watch. No amounts or account details.
+
 ## 2026-11-26 — Git-Master — Daily dev-tools scan
 
 - Appended a dated 26 November 2026 section to `Library/paid-tools-tracker.md`: changes since 21 November (Devin Teams Free mode, Bito's new Governor and AI Architect products, Gitar reviews still paused), new FOSS releases, and new tools to watch. No amounts or account details.

@@ -111,3 +111,51 @@ None of these changes is a reason to drop a paid tool today.
 
 - Product Hunt was not checked today.
 - The Bito and cubic pricing pages returned a bot-check page to a plain download and were read through a second fetch. All nine official pages were read.
+
+## 2026-11-27 — Daily scan (Git-Master)
+
+Changes since the 26 November 2026 entry. Official pages rechecked on 27 November 2026 (word-level compare against the 26 November copies); GitHub data pulled the same day.
+
+### Tools we track
+
+| Tool | What changed since 26 Nov | Verdict |
+| --- | --- | --- |
+| mabl | No change. | Unchanged |
+| Octopus Deploy | No change. | Stay on Free |
+| Devin | No change. Free mode on Teams and the Free, Pro, Max, and Teams plan list are the same. | Unchanged. Recheck after 30 Nov |
+| Bito | No change. Governor and AI Architect still lead the page; AI Code Review Team and Professional are unchanged. | Unchanged |
+| Gitar | No pricing change. Automatic reviews are still paused on the included budget (bot notes on pull requests on 26 Nov 2026, Mountain Time). | Still do not pay a higher tier |
+| SonarCloud | No change. | Unchanged |
+| CircleCI | No change. | Unchanged |
+| cubic | No change. Team, Pro, Max, and optional flex capacity are the same. | Unchanged |
+| GitGuardian | No change. | Unchanged |
+
+### FOSS alternatives, new releases
+
+| Project | Stars | License | Latest release |
+| --- | --- | --- | --- |
+| [Playwright](https://github.com/microsoft/playwright) | 101,187 | Apache-2.0 | v1.65.1 (unchanged) |
+| [Cypress](https://github.com/cypress-io/cypress) | 51,041 | MIT | v16.4.0 (unchanged) |
+| [OpenHands](https://github.com/OpenHands/OpenHands) | 94,455 | MIT | v1.46.0 (unchanged) |
+| [PR-Agent](https://github.com/The-PR-Agent/pr-agent) | 16,719 | MIT | v0.50.0 (unchanged) |
+| [Kodus](https://github.com/kodustech/kodus-ai) | 1,663 | AGPLv3 (GitHub shows NOASSERTION) | selfhosted-2.2.12 (22 Nov 2026) |
+| [Semgrep](https://github.com/semgrep/semgrep) | 18,010 | LGPL-2.1 | v1.187.0 (unchanged) |
+| [Qlty](https://github.com/qltysh/qlty) | 3,236 | Business Source License 1.1 | v0.674.0 (unchanged) |
+| [Woodpecker CI](https://github.com/woodpecker-ci/woodpecker) | 8,294 | Apache-2.0 | v3.21.0 (unchanged) |
+| [Gitleaks](https://github.com/gitleaks/gitleaks) | 31,389 | MIT | v8.30.1 (unchanged) |
+| [Kamal](https://github.com/basecamp/kamal) | 14,765 | MIT | v2.12.0 (unchanged) |
+| [Argo CD](https://github.com/argoproj/argo-cd) | 24,709 | Apache-2.0 | v3.6.3 (24 Nov 2026, new since 21 Nov) |
+
+None of these is a reason to drop a paid tool today.
+
+### New or trending, worth watching
+
+- [Tracer-Cloud/opensre](https://github.com/Tracer-Cloud/opensre): still on GitHub trending. 16,031 stars, Apache-2.0, release v0.1.2026.11.27 (26 Nov 2026, Mountain Time). Watch only.
+- [elementalsouls/Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter): Claude Code skill bundle for bug hunting and red-team work. 25,624 stars, MIT, top of GitHub trending today. Security research skills, not a replacement for GitGuardian or Sonar. Not evaluated.
+- [interfere-inc/landmines](https://github.com/interfere-inc/landmines): new release @interfere/landmines@0.3.2 (25 Nov 2026, Mountain Time). 823 stars, MIT. Still a candidate for the CircleCI lint backup; not evaluated.
+- Security news to be aware of: a Hacker News thread reports that [Notion's official MCP server put hidden upsell instructions into agent context](https://news.ycombinator.com/item?id=50658093) (source post on Reddit). Not verified. Relevant to the fleet's prompt-injection work and to any bot using a Notion connector.
+
+### Not checked
+
+- Product Hunt was not checked today.
+- Bito and cubic again returned a bot-check page to a plain download; Bito was read through a second fetch, and cubic loaded on the second try. All nine official pages were read.

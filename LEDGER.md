@@ -2,6 +2,16 @@
 
 Play-by-play record per revvel-standards. Append-only. Newest first.
 
+## 2026-11-27 — Git-Master session — Daily dev-tools scan
+
+- **Actor:** Git-Master (GitHub orchestrator)
+- **Requested by:** Audrey Evans, standing daily dev-tools scout routine (2026-11-21: track paid apps every day, check price changes, new tools, and free open-source alternatives)
+- **Role:** executed
+- **Files:** `Library/paid-tools-tracker.md`, `CHANGELOG.md`, `LEDGER.md`
+- **What was done:** Rechecked the nine official pricing pages and compared them word by word with the 26 November copies; pulled stars, licenses, and latest releases for the FOSS list; scanned GitHub trending and Hacker News. Appended a dated section. Earlier sections are unchanged.
+- **Decisions:** Public file keeps tiers, plan names, and alternatives only. This branch starts from `daily/2026-11-26` because the tracker file is not on `main` yet, so the pull request also carries the 21 and 26 November commits. No new WR issue: nothing new is worth building beyond open issues #9 and #10.
+- **Open / handoff:** Recheck Devin after 30 Nov 2026. Product Hunt not checked. The private Page was not updated in this session (no Page tool was available). Pull request is not self-merged.
+
 ## 2026-11-26 — Git-Master session — Daily dev-tools scan
 
 - **Actor:** Git-Master (GitHub orchestrator)
